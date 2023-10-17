@@ -30,10 +30,10 @@ try:
   #Search bar to search for fruit of choice
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
 
-    if not fruit_choice:
-      streamlit.error("Please select a fruit to get infomration.")
+  if not fruit_choice:
+      streamlit.error("Please select a fruit to get information.")
       
-    else:
+  else:
       #import requests
       #writes the data to the screen
       fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ fruit_choice)
