@@ -32,6 +32,9 @@ import requests
 #writes the data to the screen
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ fruit_choice)
 
+# output the data in the screen as a table
+streamlit.dataframe(fruityvice_normalized)
+
 #connect to snowflake account
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
